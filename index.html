@@ -12,6 +12,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <!-- font Miama -->
+        <link href="https://fonts.cdnfonts.com/css/miama" rel="stylesheet">
         <!-- Custom Styles -->
         <style type="text/tailwindcss">
             @theme {
@@ -24,12 +26,24 @@
             .container {
                 @apply max-w-[90rem] mx-auto;
             }
+
+            .font-miama {
+                font-family: 'Miama', sans-serif;                              
+            }
+
+            .btn {
+                @apply px-7 py-3 sm:px-12 sm:py-4 text-sm sm:text-lg font-semibold text-white rounded-[2.625rem] border cursor-pointer;
+            }
+
+            p {
+                color: rgba(255, 255, 255, 0.5);
+            }
           </style>
 	</head>
 	<body class="font-inter bg-black">
         <header class="container bg-gradient-to-b from-[#111111] to-[rgba(119,119,119, 0)]">
             <!-- Navbar Start -->
-            <nav class="flex justify-between items-center px-5 py-12 md:px-8 lg:px-20 xl:px-48 xl:py-14">
+            <nav class="flex justify-between items-center px-5 py-12 sm:px-8 lg:px-20 xl:px-48 xl:py-14">
                 <h2 class="text-4xl text-carmine-pink italic font-extrabold cursor-pointer">Fitness</h2>
                 <ul class="hidden sm:flex items-center gap-5 md:gap-12 border p-1 border-white border-opacity-10 text-white rounded-[2.5rem]">
                     <li class="nav-link bg-carmine-pink"><a href="#">Home</a></li>
@@ -40,6 +54,36 @@
                 <span class="sm:hidden cursor-pointer"><i class="fa-solid fa-bars text-white text-2xl"></i></span>
             </nav>
             <!-- Navbar End -->
+             <!-- Banner Start -->
+             <section class="flex flex-col lg:flex-row gap-20 xl:gap-24 justify-between items-center px-5 py-12 sm:px-8 lg:px-20 xl:px-44 xl:py-14">
+                <div class="lg:max-w-lg md:px-16 md:py-20 lg:px-0 lg:py-0 space-y-7">
+                    <h1 class="md:max-w-xl text-5xl sm:text-7xl text-white font-extrabold leading-[3rem]">
+                        Get body in
+                        <span class="font-miama font-normal text-8xl sm:text-9xl">shape</span> & stay healthy
+                    </h1>
+                    <p class="md:max-w-2xl">A huge selection of health and fitness content, healthy recipes and transformation stories to help you get fit and stay fit!</p>
+                    <div class="flex gap-4">
+                        <button class="btn border-carmine-pink bg-carmine-pink">Join Club Now!</button>
+                        <button class="btn border-white">Download App</button>
+                    </div>
+                </div>
+                <div class="relative sm:pr-6">
+                    <img src="images/Images 2.png" alt="Trainer">
+                    <div class="absolute top-1 -right-[4%] sm:top-[21%] sm:-right-[10%] backdrop-blur-sm text-white bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255, 0.10)] px-4 sm:px-6 py-4 w-fit h-fit rounded-xl">
+                        <h2 class="text-sm sm:text-4xl font-extrabold">500+</h2>
+                        <h4 class="opacity-65 text-xs sm:text-sm mt-1">Free Workout Videos</h4>
+                    </div>
+                    <div class="absolute bottom-20 sm:bottom-[11%] sm:-left-[30%] backdrop-blur-sm flex items-center justify-between gap-3 text-white bg-[#30303089] border border-[rgba(255,255,255, 0.10)] px-4 sm:px-6 py-4 w-fit h-fit rounded-xl">
+                        <div class="grid place-items-center w-5 sm:w-10 h-5 sm:h-10 rounded-full bg-carmine-pink">
+                            <i class="text-xs sm:text-lg fa-solid fa-play"></i>
+                        </div>
+                        <div class="text-white">
+                            <h2 class="text-sm sm:text-4xl font-extrabold">350+</h2>
+                            <h4 class="opacity-65 text-xs sm:text-sm mt-2">Video tutorial</h4>
+                        </div>
+                    </div>
+                </div>
+             </section>
         </header>
         <main></main>
         <footer></footer>
