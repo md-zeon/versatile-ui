@@ -4,93 +4,266 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Fitness</title>
-        <!-- Tailwind CDN -->
-        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-        <!-- font awesome CDN -->
-        <script src="https://kit.fontawesome.com/8ca39e687b.js" crossorigin="anonymous"></script>
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-        <!-- font Miama -->
-        <link href="https://fonts.cdnfonts.com/css/miama" rel="stylesheet">
-        <!-- Custom Styles -->
-        <style type="text/tailwindcss">
-            @theme {
-              --color-carmine-pink: #da373d;
-              --font-inter: "Inter", serif;
-            }
-            .nav-link {
-                @apply px-5 py-2 hover:bg-carmine-pink rounded-4xl transition-colors duration-500 cursor-pointer;
-            }
-            .wrapper {
-                @apply max-w-[90rem] mx-auto;
-            }
+		<!-- Tailwind CDN -->
+		<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+		<!-- font awesome CDN -->
+		<script
+			src="https://kit.fontawesome.com/8ca39e687b.js"
+			crossorigin="anonymous"
+		></script>
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- font Miama -->
+		<link href="https://fonts.cdnfonts.com/css/miama" rel="stylesheet" />
+		<!-- Custom Styles -->
+		<style type="text/tailwindcss">
+			@theme {
+				--color-carmine-pink: #da373d;
+				--font-inter: "Inter", serif;
+			}
+			.nav-link {
+				@apply px-5 py-2 hover:bg-carmine-pink rounded-4xl transition-colors duration-500 cursor-pointer;
+			}
+			.wrapper {
+				@apply max-w-[90rem] mx-auto;
+			}
 
-            .font-miama {
-                font-family: 'Miama', sans-serif;                              
-            }
+			.font-miama {
+				font-family: "Miama", sans-serif;
+			}
 
-            .btn {
-                @apply px-7 py-3 sm:px-12 sm:py-4 text-sm sm:text-lg font-semibold text-white rounded-[2.625rem] border cursor-pointer;
-            }
+			.btn {
+				@apply px-7 py-3 sm:px-12 sm:py-4 text-sm sm:text-lg font-semibold text-white rounded-[2.625rem] border cursor-pointer;
+			}
 
-            p {
-                color: rgba(255, 255, 255, 0.5);
-            }
-          </style>
+			section {
+				@apply px-5 py-12 sm:px-8 lg:px-20 xl:px-44 xl:py-14;
+			}
+
+			p {
+				color: rgba(255, 255, 255, 0.5);
+			}
+		</style>
 	</head>
 	<body class="font-inter bg-black">
-        <header class="wrapper bg-gradient-to-b from-[#111111] to-[rgba(119,119,119, 0)]">
-            <!-- Navbar Start -->
-            <nav class="flex justify-between items-center px-5 py-12 sm:px-8 lg:px-20 xl:px-48 xl:py-14">
-                <h2 class="text-4xl text-carmine-pink italic font-extrabold cursor-pointer">Fitness</h2>
-                <ul class="hidden sm:flex items-center gap-5 md:gap-12 border p-1 border-white border-opacity-10 text-white rounded-[2.5rem]">
-                    <li class="nav-link bg-carmine-pink"><a href="#">Home</a></li>
-                    <li class="nav-link"><a href="#">Service</a></li>
-                    <li class="nav-link"><a href="#">Contact</a></li>
-                    <li class="nav-link"><a href="#">About</a></li>
-                </ul>
-                <span class="sm:hidden cursor-pointer"><i class="fa-solid fa-bars text-white text-2xl"></i></span>
-            </nav>
-            <!-- Navbar End -->
-             <!-- Banner Start -->
-             <section class="flex flex-col lg:flex-row gap-20 xl:gap-24 justify-between items-center px-5 py-12 sm:px-8 lg:px-20 xl:px-44 xl:py-14">
-                <div class="lg:max-w-lg md:px-16 md:py-20 lg:px-0 lg:py-0 space-y-7">
-                    <h1 class="md:max-w-xl text-5xl sm:text-7xl text-white font-extrabold leading-[3rem]">
-                        Get body in
-                        <span class="font-miama font-normal text-8xl sm:text-9xl">shape</span> & stay healthy
-                    </h1>
-                    <p class="md:max-w-2xl">A huge selection of health and fitness content, healthy recipes and transformation stories to help you get fit and stay fit!</p>
-                    <div class="flex gap-4">
-                        <button class="btn border-carmine-pink bg-carmine-pink">Join Club Now!</button>
-                        <button class="btn border-white">Download App</button>
-                    </div>
-                </div>
-                <div class="relative sm:pr-6">
-                    <img src="images/Images 2.png" alt="Trainer">
-                    <div class="absolute top-1 -right-[4%] sm:top-[21%] sm:-right-[10%] backdrop-blur-sm text-white bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255, 0.10)] px-4 sm:px-6 py-4 w-fit h-fit rounded-xl">
-                        <h2 class="text-sm sm:text-4xl font-extrabold">500+</h2>
-                        <h4 class="opacity-65 text-xs sm:text-sm mt-1">Free Workout Videos</h4>
-                    </div>
-                    <div class="absolute bottom-20 sm:bottom-[11%] sm:-left-[30%] backdrop-blur-sm flex items-center justify-between gap-3 text-white bg-[#30303089] border border-[rgba(255,255,255, 0.10)] px-4 sm:px-6 py-4 w-fit h-fit rounded-xl">
-                        <div class="grid place-items-center w-5 sm:w-10 h-5 sm:h-10 rounded-full bg-carmine-pink">
-                            <i class="text-xs sm:text-lg fa-solid fa-play"></i>
-                        </div>
-                        <div class="text-white">
-                            <h2 class="text-sm sm:text-4xl font-extrabold">350+</h2>
-                            <h4 class="opacity-65 text-xs sm:text-sm mt-2">Video tutorial</h4>
-                        </div>
-                    </div>
-                </div>
-             </section>
-             <!-- Banner End -->
-        </header>
-        <main>
-            <section class="wrapper">
-
-            </section>
-        </main>
-        <footer></footer>
-    </body>
+		<header
+			class="bg-gradient-to-b from-[#111111] to-[rgba(119,119,119, 0)]"
+		>
+			<div class="wrapper">
+				<!-- Navbar Start -->
+				<nav
+					class="flex justify-between items-center px-5 py-12 sm:px-8 lg:px-20 xl:px-48 xl:py-14"
+				>
+					<h2
+						class="text-4xl text-carmine-pink italic font-extrabold cursor-pointer"
+					>
+						Fitness
+					</h2>
+					<ul
+						class="hidden sm:flex items-center gap-5 md:gap-12 border p-1 border-white border-opacity-10 text-white rounded-[2.5rem]"
+					>
+						<li class="nav-link bg-carmine-pink">
+							<a href="#">Home</a>
+						</li>
+						<li class="nav-link"><a href="#">Service</a></li>
+						<li class="nav-link"><a href="#">Contact</a></li>
+						<li class="nav-link"><a href="#">About</a></li>
+					</ul>
+					<span class="sm:hidden cursor-pointer"
+						><i class="fa-solid fa-bars text-white text-2xl"></i
+					></span>
+				</nav>
+				<!-- Navbar End -->
+				<!-- Banner Start -->
+				<section
+					class="flex flex-col lg:flex-row gap-20 xl:gap-24 justify-between items-center"
+				>
+					<div
+						class="lg:max-w-lg md:px-16 md:py-20 lg:px-0 lg:py-0 space-y-7"
+					>
+						<h1
+							class="md:max-w-xl text-5xl sm:text-7xl text-white font-extrabold leading-[3rem]"
+						>
+							Get body in
+							<span
+								class="font-miama font-normal text-8xl sm:text-9xl"
+								>shape</span
+							>
+							& stay healthy
+						</h1>
+						<p class="md:max-w-2xl">
+							A huge selection of health and fitness content,
+							healthy recipes and transformation stories to help
+							you get fit and stay fit!
+						</p>
+						<div class="flex gap-4">
+							<button
+								class="btn border-carmine-pink bg-carmine-pink"
+							>
+								Join Club Now!
+							</button>
+							<button class="btn border-white">
+								Download App
+							</button>
+						</div>
+					</div>
+					<div class="relative sm:pr-6">
+						<img src="images/Images 2.png" alt="Trainer" />
+						<div
+							class="absolute top-1 -right-[4%] sm:top-[21%] sm:-right-[10%] backdrop-blur-sm text-white bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255, 0.10)] px-4 sm:px-6 py-4 w-fit h-fit rounded-xl"
+						>
+							<h2 class="text-sm sm:text-4xl font-extrabold">
+								500+
+							</h2>
+							<h4 class="opacity-65 text-xs sm:text-sm mt-1">
+								Free Workout Videos
+							</h4>
+						</div>
+						<div
+							class="absolute bottom-20 sm:bottom-[11%] sm:-left-[30%] backdrop-blur-sm flex items-center justify-between gap-3 text-white bg-[#30303089] border border-[rgba(255,255,255, 0.10)] px-4 sm:px-6 py-4 w-fit h-fit rounded-xl"
+						>
+							<div
+								class="grid place-items-center w-5 sm:w-10 h-5 sm:h-10 rounded-full bg-carmine-pink"
+							>
+								<i
+									class="text-xs sm:text-lg fa-solid fa-play"
+								></i>
+							</div>
+							<div class="text-white">
+								<h2 class="text-sm sm:text-4xl font-extrabold">
+									350+
+								</h2>
+								<h4 class="opacity-65 text-xs sm:text-sm mt-2">
+									Video tutorial
+								</h4>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Banner End -->
+			</div>
+		</header>
+		<main>
+			<!-- Change Habits Section Start -->
+			<section class="wrapper">
+				<!-- content -->
+				<div class="text-center space-y-3 mb-14">
+					<h1 class="text-white text-3xl md:text-5xl font-extrabold">
+						Change Your Habits
+					</h1>
+					<p class="text-sm max-w-md mx-auto leading-6">
+						We believe fitness should be accessible to everyone,
+						everywhere, regardless of income or access to a gym.
+					</p>
+				</div>
+				<!-- habit Cards  -->
+				<div
+					class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10"
+				>
+					<!-- card 1 -->
+					<div class="text-center">
+						<div class="px-6 pb-7 rounded-full mx-auto w-fit">
+							<img
+								class="rounded-full"
+								src="images/image 3.png"
+								alt=""
+							/>
+						</div>
+						<h3 class="text-lg font-semibold text-white mb-1">
+							Movement
+						</h3>
+						<p class="text-sm max-w-60 mx-auto">
+							We believe fitness should be accessible to everyone
+						</p>
+					</div>
+					<!-- card 2 -->
+					<div class="text-center">
+						<div class="px-6 pb-7 rounded-full mx-auto w-fit">
+							<img
+								class="rounded-full"
+								src="images/image 2.png"
+								alt=""
+							/>
+						</div>
+						<h3 class="text-lg font-semibold text-white mb-1">
+							Time
+						</h3>
+						<p class="text-sm max-w-60 mx-auto">
+							We believe fitness should be accessible to everyone
+						</p>
+					</div>
+					<!-- card 3 -->
+					<div class="text-center">
+						<div class="px-6 pb-7 rounded-full mx-auto w-fit">
+							<img
+								class="rounded-full"
+								src="images/image 4.png"
+								alt=""
+							/>
+						</div>
+						<h3 class="text-lg font-semibold text-white mb-1">
+							Practice
+						</h3>
+						<p class="text-sm max-w-60 mx-auto">
+							We believe fitness should be accessible to everyone
+						</p>
+					</div>
+					<!-- card 4 -->
+					<div class="text-center">
+						<div class="px-6 pb-7 rounded-full mx-auto w-fit">
+							<img
+								class="rounded-full"
+								src="images/image 5.png"
+								alt=""
+							/>
+						</div>
+						<h3 class="text-lg font-semibold text-white mb-1">
+							Weight Loss
+						</h3>
+						<p class="text-sm max-w-60 mx-auto">
+							We believe fitness should be accessible to everyone
+						</p>
+					</div>
+				</div>
+				<!-- Run Card -->
+				<div
+					class="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-7 p-8 my-14 bg-[#222222] rounded-2xl"
+				>
+					<!-- content -->
+					<div>
+						<h1
+							class="text-3xl md:text-5xl font-extrabold text-white mb-3"
+						>
+							Run an Extra Mile Easily
+						</h1>
+						<p class="text-sm mb-6">
+							We believe fitness should be accessible to everyone,
+							everywhere, regardless of income or access to a gym.
+							With hundreds of professional workouts.
+						</p>
+						<button
+							class="btn w-full sm:w-fit bg-carmine-pink border-carmine-pink"
+						>
+							Join Now
+						</button>
+					</div>
+					<!-- run img -->
+					<div>
+						<img
+							class="rounded-2xl w-full"
+							src="images/run.jpg"
+							alt=""
+						/>
+					</div>
+				</div>
+			</section>
+			<!-- Change Habits Section End -->
+		</main>
+		<footer></footer>
+	</body>
 </html>
