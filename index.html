@@ -27,7 +27,7 @@
 				--font-inter: "Inter", serif;
 			}
 			.nav-link {
-				@apply px-5 py-2 hover:bg-carmine-pink rounded-4xl transition-colors duration-500 cursor-pointer;
+				@apply px-5 py-2  rounded-4xl transition-colors duration-500 cursor-pointer;
 			}
 			.wrapper {
 				@apply max-w-[90rem] mx-auto;
@@ -38,7 +38,7 @@
 			}
 
 			.btn {
-				@apply px-7 py-3 sm:px-12 sm:py-4 text-sm sm:text-lg font-semibold text-white rounded-[2.625rem] border cursor-pointer;
+				@apply px-7 py-3 sm:px-12 sm:py-4 text-sm sm:text-lg font-semibold text-white rounded-[2.625rem] border cursor-pointer hover:bg-transparent hover:border-white transition-colors duration-500 hover:shadow-sm shadow-carmine-pink;
 			}
 
 			section {
@@ -70,11 +70,24 @@
 				background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 140 140' width='20' height='20' xmlns='http://www.w3.org/2000/svg'><g><path d='m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z' fill='white'/></g></svg>");
 				padding-left: 30px;
 			}
+
+			ul li:nth-child(2):hover~span {
+				left: 27%;
+			}
+
+			ul li:nth-child(3):hover~span {
+				left: 55.5%;
+			}
+
+			ul li:nth-child(4):hover~span {
+				left: 82%;
+			}
+
 		</style>
 	</head>
 	<body class="font-inter bg-black">
 		<header
-			class="bg-gradient-to-b from-[#111111] to-[rgba(119,119,119, 0)]"
+			class="bg-[linear-gradient(to_bottom,_#000000_10%,_rgba(119,119,119,0.2)_50%,_rgba(119,119,119,0)_100%)]"
 		>
 			<div class="wrapper">
 				<!-- Navbar Start -->
@@ -87,16 +100,18 @@
 						Fitness
 					</h2>
 					<ul
-						class="hidden sm:flex items-center gap-5 md:gap-12 border p-1 border-white border-opacity-10 text-white rounded-[2.5rem]"
+						class="relative hidden md:flex items-center gap-5 md:gap-12 border p-1 border-white border-opacity-10 text-white rounded-[2.5rem]"
 					>
-						<li class="nav-link bg-carmine-pink">
+						<li class="relative z-100 nav-link">
 							<a href="#">Home</a>
 						</li>
-						<li class="nav-link"><a href="#">Service</a></li>
-						<li class="nav-link"><a href="#">Contact</a></li>
-						<li class="nav-link"><a href="#">About</a></li>
+						<li class="relative z-100 nav-link"><a href="#">Service</a></li>
+						<li class="relative z-100 nav-link"><a href="#">Contact</a></li>
+						<li class="relative z-100 nav-link"><a href="#">About</a></li>
+						<!-- hover bg -->
+						<span class="absolute top-1 h-[calc(100%_-_.5rem)] left-1 bg-carmine-pink w-[17%] z-10 rounded-[2.5rem] transition-all duration-500 ease-linear"></span>
 					</ul>
-					<span class="sm:hidden cursor-pointer"
+					<span class="md:hidden cursor-pointer"
 						><i class="fa-solid fa-bars text-white text-2xl"></i
 					></span>
 				</nav>
@@ -137,7 +152,7 @@
 					<div class="relative sm:pr-6">
 						<img src="images/Images 2.png" alt="Trainer" />
 						<div
-							class="absolute top-1 -right-[4%] sm:top-[21%] sm:-right-[10%] backdrop-blur-sm text-white bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255, 0.10)] px-4 sm:px-6 py-4 w-fit h-fit rounded-xl"
+							class="absolute top-1 -right-[4%] sm:top-[21%] sm:-right-[10%] backdrop-blur-sm text-white bg-white/10 border border-white/10 px-4 sm:px-6 py-4 w-fit h-fit rounded-xl"
 						>
 							<h2 class="text-sm sm:text-4xl font-extrabold">
 								500+
@@ -147,10 +162,10 @@
 							</h4>
 						</div>
 						<div
-							class="absolute bottom-20 sm:bottom-[11%] sm:-left-[30%] backdrop-blur-sm flex items-center justify-between gap-3 text-white bg-[#30303089] border border-[rgba(255,255,255, 0.10)] px-4 sm:px-6 py-4 w-fit h-fit rounded-xl"
+							class="absolute bottom-20 sm:bottom-[11%] sm:-left-[30%] backdrop-blur-sm flex items-center justify-between gap-3 text-white bg-[#30303089] border border-white/10 px-4 sm:px-6 py-4 w-fit h-fit rounded-xl"
 						>
 							<div
-								class="grid place-items-center w-5 sm:w-10 h-5 sm:h-10 rounded-full bg-carmine-pink"
+								class="grid place-items-center w-5 sm:w-10 h-5 sm:h-10 rounded-full bg-carmine-pink hover:border-1 hover:border-white hover:bg-transparent transition-colors duration-500 cursor-pointer"
 							>
 								<i
 									class="text-xs sm:text-lg fa-solid fa-play"
@@ -621,7 +636,7 @@
 				>
 					<!-- team 1 -->
 					<div
-						class="relative bg-[url('images/trainer1.png')] bg-no-repeat bg-center bg-cover min-h-64 h-20 rounded-2xl"
+						class="relative bg-[url('images/trainer1.png')] bg-no-repeat bg-center bg-cover min-h-64 h-20 rounded-2xl hover:shadow-sm shadow-carmine-pink"
 					>
 						<!-- Overlay -->
 						<div
@@ -637,7 +652,7 @@
 					</div>
 					<!-- team 2 -->
 					<div
-						class="relative bg-[url('images/trainer2.png')] bg-no-repeat bg-center bg-cover min-h-64 h-20 rounded-2xl"
+						class="relative bg-[url('images/trainer2.png')] bg-no-repeat bg-center bg-cover min-h-64 h-20 rounded-2xl hover:shadow-sm shadow-carmine-pink"
 					>
 						<!-- Overlay -->
 						<div
@@ -653,7 +668,7 @@
 					</div>
 					<!-- team 3 -->
 					<div
-						class="relative bg-[url('images/trainer3.png')] bg-no-repeat bg-center bg-cover min-h-64 h-20 rounded-2xl"
+						class="relative bg-[url('images/trainer3.png')] bg-no-repeat bg-center bg-cover min-h-64 h-20 rounded-2xl hover:shadow-sm shadow-carmine-pink"
 					>
 						<!-- Overlay -->
 						<div
@@ -669,7 +684,7 @@
 					</div>
 					<!-- team 4 -->
 					<div
-						class="relative bg-[url('images/trainer4.png')] bg-no-repeat bg-center bg-cover min-h-64 h-20 rounded-2xl"
+						class="relative bg-[url('images/trainer4.png')] bg-no-repeat bg-center bg-cover min-h-64 h-20 rounded-2xl hover:shadow-sm shadow-carmine-pink"
 					>
 						<!-- Overlay -->
 						<div
@@ -685,7 +700,7 @@
 					</div>
 					<!-- team 5 -->
 					<div
-						class="relative bg-[url('images/trainer5.png')] bg-no-repeat bg-center bg-cover min-h-64 h-20 rounded-2xl"
+						class="relative bg-[url('images/trainer5.png')] bg-no-repeat bg-center bg-cover min-h-64 h-20 rounded-2xl hover:shadow-sm shadow-carmine-pink"
 					>
 						<!-- Overlay -->
 						<div
@@ -701,7 +716,7 @@
 					</div>
 					<!-- team 6 -->
 					<div
-						class="relative bg-[url('images/trainer6.png')] bg-no-repeat bg-center bg-cover min-h-64 h-20 rounded-2xl"
+						class="relative bg-[url('images/trainer6.png')] bg-no-repeat bg-center bg-cover min-h-64 h-20 rounded-2xl hover:shadow-sm shadow-carmine-pink"
 					>
 						<!-- Overlay -->
 						<div
@@ -744,10 +759,10 @@
 					<ul
 						class="text-white/50 text-lg md:text-2xl space-y-3 md:space-y-5"
 					>
-						<li><a href="#">Service</a></li>
-						<li><a href="#">Contact Us</a></li>
-						<li><a href="#">Affiliate Program</a></li>
-						<li><a href="#">About Us</a></li>
+						<li><a class="hover:border-b-4 rounded-lg hover:text-carmine-pink border-carmine-pink transition-colors duration-300" href="#">Service</a></li>
+						<li><a class="hover:border-b-4 rounded-lg hover:text-carmine-pink border-carmine-pink transition-colors duration-300" href="#">Contact Us</a></li>
+						<li><a class="hover:border-b-4 rounded-lg hover:text-carmine-pink border-carmine-pink transition-colors duration-300" href="#">Affiliate Program</a></li>
+						<li><a class="hover:border-b-4 rounded-lg hover:text-carmine-pink border-carmine-pink transition-colors duration-300" href="#">About Us</a></li>
 					</ul>
 				</div>
 				<!-- 3rd Column -->
@@ -758,10 +773,10 @@
 					<ul
 						class="text-white/50 text-lg md:text-2xl space-y-3 md:space-y-5"
 					>
-						<li><a href="#">Fitness</a></li>
-						<li><a href="#">Platform</a></li>
-						<li><a href="#">Workout Library</a></li>
-						<li><a href="#">App Design</a></li>
+						<li><a class="hover:border-b-4 rounded-lg hover:text-carmine-pink border-carmine-pink transition-colors duration-300" href="#">Fitness</a></li>
+						<li><a class="hover:border-b-4 rounded-lg hover:text-carmine-pink border-carmine-pink transition-colors duration-300" href="#">Platform</a></li>
+						<li><a class="hover:border-b-4 rounded-lg hover:text-carmine-pink border-carmine-pink transition-colors duration-300" href="#">Workout Library</a></li>
+						<li><a class="hover:border-b-4 rounded-lg hover:text-carmine-pink border-carmine-pink transition-colors duration-300" href="#">App Design</a></li>
 					</ul>
 				</div>
 			</div>
