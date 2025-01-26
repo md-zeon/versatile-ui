@@ -48,6 +48,28 @@
 			p {
 				color: rgba(255, 255, 255, 0.5);
 			}
+
+			/* Remove spinners from number inputs */
+			input[type="number"]::-webkit-outer-spin-button,
+			input[type="number"]::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+			}
+
+			input[type="number"] {
+				-moz-appearance: textfield;
+			}
+
+			/* Style the select dropdown */
+			select {
+				appearance: none;
+				-moz-appearance: none;
+				-webkit-appearance: none;
+				background-position: right 30px top 50%;
+				background-repeat: no-repeat;
+				background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 140 140' width='20' height='20' xmlns='http://www.w3.org/2000/svg'><g><path d='m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z' fill='white'/></g></svg>");
+				padding-left: 30px;
+			}
 		</style>
 	</head>
 	<body class="font-inter bg-black">
@@ -264,15 +286,19 @@
 			</section>
 			<!-- Change Habits Section End -->
 			<!-- Trainings and Exercises Section Start -->
-			<section>
-				<h1 class="text-white text-3xl md:text-5xl mb-4 font-extrabold">Trainings and Exercises</h1>
+			<section class="wrapper">
+				<h1 class="text-white text-3xl md:text-5xl mb-4 font-extrabold">
+					Trainings and Exercises
+				</h1>
 				<p class="text-sm max-w-md leading-6">
 					We believe fitness should be accessible to everyone,
 					everywhere, regardless of income or access to a gym.
 				</p>
 
 				<!-- Exercise Cards -->
-				<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 mt-14">
+				<div
+					class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 mt-14"
+				>
 					<!-- card 1 -->
 					<div
 						class="relative grid hover:place-items-center bg-[url(images/exercise1.jpg)] bg-cover bg-center min-h-32 h-52 max-h-52 group"
@@ -360,6 +386,191 @@
 				</div>
 			</section>
 			<!-- Trainings and Exercises Section End -->
+			<!-- BMI Calculator Section Start -->
+			<section class="wrapper">
+				<h1 class="text-white text-3xl md:text-5xl mb-4 font-extrabold">
+					BMI Calculator
+				</h1>
+				<p class="text-sm max-w-md leading-6">
+					We believe fitness should be accessible to everyone,
+					everywhere, regardless of income or access to a gym.
+				</p>
+			</section>
+			<div class="bg-[#222222]">
+				<section class="wrapper">
+					<!-- BMI Container -->
+					<div
+						class="grid place-items-center gap-11 sm:place-items-start grid-cols-1 md:grid-cols-2"
+					>
+						<!-- BMI Chart -->
+						<div>
+							<h2
+								class="text-white mb-12 text-3xl font-extrabold"
+							>
+								BMI Calculator Chart
+							</h2>
+							<table
+								class="table-auto border-collapse border-2 border-[#ffffff1a]"
+							>
+								<thead>
+									<tr>
+										<th
+											class="border-2 border-[#ffffff1a] text-white text-left py-3 px-5"
+										>
+											BMI
+										</th>
+										<th
+											class="border-2 border-[#ffffff1a] text-white text-left py-3 px-5"
+										>
+											Weight Status
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td
+											class="border-2 border-[#ffffff1a] text-[#ffffff80] py-3 px-5"
+										>
+											Below 18.5
+										</td>
+										<td
+											class="border-2 border-[#ffffff1a] text-[#ffffff80] py-3 px-5"
+										>
+											Underweight
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="border-2 border-[#ffffff1a] text-[#ffffff80] py-3 px-5"
+										>
+											18.5 - 24.9
+										</td>
+										<td
+											class="border-2 border-[#ffffff1a] text-[#ffffff80] py-3 px-5"
+										>
+											Healthy
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="border-2 border-[#ffffff1a] text-[#ffffff80] py-3 px-5"
+										>
+											25.0 - 29.9
+										</td>
+										<td
+											class="border-2 border-[#ffffff1a] text-[#ffffff80] py-3 px-5"
+										>
+											Overweight
+										</td>
+									</tr>
+									<tr>
+										<td
+											class="border-2 border-[#ffffff1a] text-[#ffffff80] py-3 px-5"
+										>
+											30.0 - and Above
+										</td>
+										<td
+											class="border-2 border-[#ffffff1a] text-[#ffffff80] py-3 px-5"
+										>
+											Obese
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- BMI Calculator -->
+						<div class="space-y-8">
+							<div class="text-center sm:text-start">
+								<h2
+									class="text-white mb-5 text-3xl font-extrabold"
+								>
+									Calculate your BMI
+								</h2>
+								<p>
+									We believe fitness should be accessible to
+									everyone, everywhere, regardless of income
+									or access to a gym.
+								</p>
+							</div>
+							<!-- Calculator -->
+							<form
+								class="grid gap-3 grid-cols-2 text-white"
+								action=""
+							>
+								<input
+									class="bg-white/30 py-3 pl-5 rounded-lg"
+									type="number"
+									placeholder="Height/cm"
+								/>
+								<input
+									class="bg-white/30 py-3 pl-5 rounded-lg"
+									type="number"
+									placeholder="Weight/kg"
+								/>
+								<input
+									class="bg-white/30 py-3 pl-5 rounded-lg"
+									type="number"
+									placeholder="Age"
+								/>
+								<select
+									class="bg-white/30 py-3 pl-5 rounded-lg text-white/60"
+									name="Sex"
+									id=""
+								>
+									<option
+										class="bg-slate-600"
+										value=""
+										disabled
+										selected
+									>
+										Sex
+									</option>
+									<option class="bg-slate-600" value="Male">
+										Male
+									</option>
+									<option class="bg-slate-600" value="Female">
+										Female
+									</option>
+									<option class="bg-slate-600" value="Others">
+										Others
+									</option>
+								</select>
+								<select
+									class="col-span-2 bg-white/30 py-3 pl-5 rounded-lg text-white/60"
+									name="Sex"
+									id=""
+								>
+									<option
+										class="bg-slate-600"
+										value=""
+										disabled
+										selected
+									>
+										Select an activity factor
+									</option>
+									<option class="bg-slate-600" value="Male">
+										Push Up
+									</option>
+									<option class="bg-slate-600" value="Female">
+										Yoga
+									</option>
+									<option class="bg-slate-600" value="Others">
+										Bench Press
+									</option>
+									<option class="bg-slate-600" value="Others">
+										None
+									</option>
+								</select>
+							</form>
+							<button
+								class="btn bg-carmine-pink border-carmine-pink"
+							>
+								Calculate
+							</button>
+						</div>
+					</div>
+				</section>
+			</div>
 		</main>
 		<footer></footer>
 	</body>
